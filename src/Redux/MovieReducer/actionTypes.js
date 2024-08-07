@@ -1,0 +1,4 @@
+export const FETCH_MOVIES_SUCCESS = 'FETCH_MOVIES_SUCCESS';
+export const SET_LOADING = 'SET_LOADING';
+export const SET_FILTER = 'SET_FILTER';
+export const SET_SORT_ORDER = 'SET_SORT_ORDER';

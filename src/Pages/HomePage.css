@@ -1,0 +1,62 @@
+
+.home-page {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .side-bar {
+    flex: 1;
+    max-width: 250px;
+  }
+  
+  .movie-list {
+    flex: 3;
+  }
+  .home-page {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+  }
+  
+  .header-title {
+    margin: 0;
+    font-size: 1.5em;
+  }
+  
+  .header-nav {
+    display: flex;
+  }
+  
+  .nav-link {
+    color: black;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1em;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  
+
+  .home-page > *:not(.header) {
+    margin-top: 60px; 
+  }
+  
