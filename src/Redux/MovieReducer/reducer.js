@@ -1,48 +1,4 @@
 
-// import {
-//   FETCH_MOVIES_SUCCESS,
-//   SET_LOADING,
-//   SET_FILTER,
-//   SET_SORT_ORDER,
-// } from './actionTypes';
-
-// const initialState = {
-//   isLoading: false,
-//   isError: false,
-//   movies: [],
-//   filter: null,
-//   sortOrder: 'asc',
-// };
-
-// const movieReducer = (state = initialState, action) => {
-//   switch (action.type) {
-//     case FETCH_MOVIES_SUCCESS:
-//       return {
-//         ...state,
-//         movies: action.payload,
-//       };
-//     case SET_LOADING:
-//       return {
-//         ...state,
-//         isLoading: action.payload,
-//       };
-//     case SET_FILTER:
-//       return {
-//         ...state,
-//         filter: action.payload,
-//       };
-//     case SET_SORT_ORDER:
-//       return {
-//         ...state,
-//         sortOrder: action.payload,
-//       };
-//     default:
-//       return state;
-//   }
-// };
-
-// export default movieReducer;
-
 import {
   FETCH_MOVIES_SUCCESS,
   SET_LOADING,

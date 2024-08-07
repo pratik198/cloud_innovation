@@ -9,9 +9,9 @@ const MoviesList = () => {
   const [sortOrder, setSortOrder] = useState('asc');
   const [filter, setFilter] = useState([]);
 
-  // Fetch movies and store in local storage
+ 
   useEffect(() => {
-    fetch('http://localhost:8080/movies')
+    fetch('/api/movies')
       .then(response => response.json())
       .then(data => {
         localStorage.setItem('movies', JSON.stringify(data));
@@ -24,27 +24,26 @@ const MoviesList = () => {
       });
   }, []);
 
-  // Apply sorting and filtering to the movies
+
   useEffect(() => {
     const storedMovies = JSON.parse(localStorage.getItem('movies')) || [];
-    console.log('Stored Movies:', storedMovies); // Debugging
+    console.log('Stored Movies:', storedMovies);
 
-    // Convert the 'year' property to a number and apply filters
+  
     let filteredMovies = storedMovies
       .filter(movie => filter.length === 0 || filter.includes(movie.rating))
       .map(movie => ({
         ...movie,
-        year: parseInt(movie.year, 10)  // Ensure year is a number
+        year: parseInt(movie.year, 10) 
       }));
 
-    console.log('Filtered Movies:', filteredMovies); // Debugging
+    console.log('Filtered Movies:', filteredMovies); 
 
-    // Sort movies based on the selected order
     filteredMovies.sort((a, b) => 
       sortOrder === 'asc' ? a.year - b.year : b.year - a.year
     );
 
-    console.log('Sorted Movies:', filteredMovies); // Debugging
+    console.log('Sorted Movies:', filteredMovies); 
 
     setFilteredMovies(filteredMovies);
   }, [sortOrder, filter]);

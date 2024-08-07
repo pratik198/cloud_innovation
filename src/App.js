@@ -104,12 +104,7 @@ const App = () => {
 
   return (
     <div>
-      {/* <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<LogIn />} />
-        <Route path="/movie/:id" element={<MovieDetail />} />
-        <Route path="/movies" element={<MoviesList />} />
-      </Routes> */}
+      
       <Header/>
 <MainRoutes/>
     </div>
